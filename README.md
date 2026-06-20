@@ -57,6 +57,8 @@ python3 exp_winsor_tune.py   # best-c Winsorized robustness check
 python3 exp_are.py           # asymptotic relative efficiency (ARE)
 python3 exp_opmm_probe.py    # oPMM-style optimized-exponent probe
 python3 exp_cf_probe.py      # moment-free CF basis on alpha-stable
+python3 exp_ewma_tune.py     # EWMA lambda-tuning robustness check
+python3 exp_blockboot.py     # block-bootstrap dependence check (well-log)
 ```
 
 All runs are **deterministic** (fixed `numpy.random.default_rng` seeds), so the printed numbers
@@ -79,6 +81,8 @@ reproduce the paper to Monte-Carlo precision.
 | `exp_are.py` | §6.3 | Table 9 (ARE) |
 | `exp_opmm_probe.py` | §6.3 | oPMM-style basis probe |
 | `exp_cf_probe.py` | §6.3, §6.6 | CF basis on α-stable |
+| `exp_ewma_tune.py` | §5.2 (robustness) | EWMA λ-tuning check |
+| `exp_blockboot.py` | §5.6 (robustness) | block-bootstrap dependence check |
 
 ## Module layout (`src/`)
 
