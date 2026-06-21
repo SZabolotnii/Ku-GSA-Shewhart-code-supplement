@@ -115,7 +115,6 @@ apparatus):
 
 ```bibtex
 @article{ZabolotniiGSAShewhart,
-  author  = {Zabolotnii, Serhii},
   title   = {Shape-Adaptive Control Charts for Non-Gaussian Processes via Kunchenko Stochastic Polynomials},
   year    = {2026},
   note    = {Manuscript}
