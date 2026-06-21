@@ -2,8 +2,7 @@
 
 Reproducible code for the paper
 
-> **Extending the Shewhart Chart with Kunchenko Stochastic Polynomials: a Unified GSA-LLR Framework for Cumulative Control Charts under Non-Gaussian Processes**
-> Serhii Zabolotnii
+> **Shape-Adaptive Control Charts for Non-Gaussian Processes via Kunchenko Stochastic Polynomials**
 
 This supplement reproduces every numerical result, table, and figure in the paper.
 
@@ -59,6 +58,7 @@ python3 exp_opmm_probe.py    # oPMM-style optimized-exponent probe
 python3 exp_cf_probe.py      # moment-free CF basis on alpha-stable
 python3 exp_ewma_tune.py     # EWMA lambda-tuning robustness check
 python3 exp_blockboot.py     # block-bootstrap dependence check (well-log)
+python3 exp_ewma_gsa_probe.py # GSA-EWMA hybrid: GSA score in an EWMA accumulator (§5.3)
 ```
 
 All runs are **deterministic** (fixed `numpy.random.default_rng` seeds), so the printed numbers
@@ -83,6 +83,7 @@ reproduce the paper to Monte-Carlo precision.
 | `exp_cf_probe.py` | §6.3, §6.6 | CF basis on α-stable |
 | `exp_ewma_tune.py` | §5.2 (robustness) | EWMA λ-tuning check |
 | `exp_blockboot.py` | §5.6 (robustness) | block-bootstrap dependence check |
+| `exp_ewma_gsa_probe.py` | §5.3 (follow-up) | GSA-EWMA hybrid: ZS/SS vs linear EWMA & GSA-CUSUM |
 
 ## Module layout (`src/`)
 
@@ -115,8 +116,7 @@ apparatus):
 ```bibtex
 @article{ZabolotniiGSAShewhart,
   author  = {Zabolotnii, Serhii},
-  title   = {Extending the Shewhart Chart with Kunchenko Stochastic Polynomials:
-             a Unified GSA-LLR Framework for Cumulative Control Charts under Non-Gaussian Processes},
+  title   = {Shape-Adaptive Control Charts for Non-Gaussian Processes via Kunchenko Stochastic Polynomials},
   year    = {2026},
   note    = {Manuscript}
 }
